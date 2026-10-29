@@ -36,6 +36,7 @@ icon: "🏖️"
 ![[프로젝트별 산출물 보관함.base]]
 
 ## 참고자료
+
 // NCS 국가직무표준 ( 정보통신 → 정보기술 → 정보기술개발 → 응용 SW 엔지니어링 )
 [https://www.ncs.go.kr/unity/th03/ncsSearchMain.do](https://www.ncs.go.kr/unity/th03/ncsSearchMain.do) 
 <br>// KOSA 한국AI, 소프트웨어협회 ( 다양한 양질의 교육 제공 정보 참고 )
@@ -45,10 +46,8 @@ icon: "🏖️"
 [https://github.com/justforwork89/LMS-backend.git](https://github.com/justforwork89/LMS-backend.git) <br>
 // 오라클 sql 학습 공간 ( class → foundation (기본) → Next Level (심화) )
 [https://devgym.oracle.com/](https://devgym.oracle.com/) <br>
-
-[https://www.youtube.com/channel/UCIEW9lpZJ5t3Wh1ikQBUsrQ/videos](https://www.youtube.com/channel/UCIEW9lpZJ5t3Wh1ikQBUsrQ/videos) ( Exbuilder 강의 )<br>// playlist → 기본 → 심화
-
-[[javajungsuk4_sample_compressed]]
+// Exbuilder 강의 ( playlist → 기본 → 심화 )
+[https://www.youtube.com/channel/UCIEW9lpZJ5t3Wh1ikQBUsrQ/videos](https://www.youtube.com/channel/UCIEW9lpZJ5t3Wh1ikQBUsrQ/videos) <br>
 
 // 개념 정리
 [[DB·SQL 개념 이해 (정형 데이터 분석 입문)]]
