@@ -49,15 +49,12 @@ icon: "🏖️"
 
 [[javajungsuk4_sample_compressed]]
 
-// 자바의 정석 test
-
+// 개념 정리
 [[DB·SQL 개념 이해 (정형 데이터 분석 입문)]]
-
 [[개발 기초 용어 사전]]
-
 [[데이터 모델링 종류]]
-
 [[자료구조 이해]]
-
 [[DB 모델링 학습노트 (5일 과정)]]
+
+// 자바의 정석
 ![[javajungsuk_basic_요약집.pdf]]
