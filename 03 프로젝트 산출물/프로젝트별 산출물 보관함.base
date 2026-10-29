@@ -1,0 +1,47 @@
+filters:
+  and:
+    - file.inFolder("03 프로젝트 산출물")
+    - file.ext == "md"
+properties:
+  file.name:
+    displayName: 산출물
+  note.주요내용:
+    displayName: 주요 내용
+  note.깃허브:
+    displayName: 깃허브 링크
+views:
+  - type: table
+    name: 전체
+    order:
+      - file.name
+      - 프로젝트
+      - 주차
+      - 상태
+      - 주요내용
+      - 깃허브
+    sort:
+      - property: 주차
+        direction: ASC
+  - type: table
+    name: 프로젝트별
+    groupBy:
+      property: 프로젝트
+      direction: ASC
+    order:
+      - file.name
+      - 주차
+      - 상태
+      - 주요내용
+    sort:
+      - property: 주차
+        direction: ASC
+  - type: table
+    name: 상태별
+    groupBy:
+      property: 상태
+      direction: ASC
+    order:
+      - file.name
+      - 프로젝트
+      - 주차
+      - 주요내용

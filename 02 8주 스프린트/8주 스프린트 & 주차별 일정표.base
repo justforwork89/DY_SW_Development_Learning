@@ -1,0 +1,48 @@
+filters:
+  and:
+    - file.inFolder("02 8주 스프린트")
+    - file.ext == "md"
+formulas:
+  기간: 'if(시작일, 시작일.format("MM/DD") + " ~ " + 종료일.format("MM/DD"), "")'
+properties:
+  file.name:
+    displayName: 주차
+  note.phase:
+    displayName: Phase
+  note.일가용시간:
+    displayName: 일 가용시간(h)
+  note.진척률:
+    displayName: 진척률(%)
+  note.주간산출물:
+    displayName: 주간 산출물
+  formula.기간:
+    displayName: 기간
+views:
+  - type: table
+    name: 일정표
+    order:
+      - file.name
+      - phase
+      - 주제
+      - formula.기간
+      - 학습목표
+      - 일가용시간
+      - 진척률
+      - 주간산출물
+    sort:
+      - property: 시작일
+        direction: ASC
+  - type: table
+    name: Phase별
+    groupBy:
+      property: phase
+      direction: ASC
+    order:
+      - file.name
+      - 주제
+      - 시작일
+      - 종료일
+      - 진척률
+    sort:
+      - property: 시작일
+        direction: ASC

@@ -1,0 +1,17 @@
+/* 표 컬럼 폭 정리 (읽기 모드 + 라이브 프리뷰) */
+
+/* 한글 단어 중간에서 줄바꿈 안 되게 (로그아/웃 → 로그아웃) */
+.markdown-rendered table td,
+.markdown-rendered table th,
+.cm-table-widget td,
+.cm-table-widget th {
+  word-break: keep-all;
+}
+
+/* 머리글(ID, 우선순위 등)과 첫 번째 열(LMS-001 같은 ID)은 한 줄로 */
+.markdown-rendered table th,
+.cm-table-widget th,
+.markdown-rendered table td:first-child,
+.cm-table-widget td:first-child {
+  white-space: nowrap;
+}

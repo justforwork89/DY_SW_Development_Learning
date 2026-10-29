@@ -1,0 +1,8 @@
+# Obsidian: 기기마다 달라지는 화면 상태는 동기화하지 않음 (충돌 방지)
+.obsidian/workspace.json
+.obsidian/workspace-mobile.json
+.obsidian/cache
+.trash/
+.DS_Store
+Thumbs.db
+.obsidian/plugins/obsidian-git/obsidian_askpass.sh
