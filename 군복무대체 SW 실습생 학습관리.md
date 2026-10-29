@@ -36,11 +36,10 @@ icon: "🏖️"
 ![[프로젝트별 산출물 보관함.base]]
 
 ## 참고자료
-
-[https://www.ncs.go.kr/unity/th03/ncsSearchMain.do](https://www.ncs.go.kr/unity/th03/ncsSearchMain.do) ( NCS 국가직무표준 )  <br>// 정보통신 → 정보기술 → 정보기술개발 → 응용 SW 엔지니어링
-
-[https://www.sw.or.kr/site/sw/main.do](https://www.sw.or.kr/site/sw/main.do) ( KOSA 한국AI, 소프트웨어협회 )           <br>// 다양한 교육 제공 정보 참고
-
+// NCS 국가직무표준 ( 정보통신 → 정보기술 → 정보기술개발 → 응용 SW 엔지니어링 )
+[https://www.ncs.go.kr/unity/th03/ncsSearchMain.do](https://www.ncs.go.kr/unity/th03/ncsSearchMain.do) 
+<br>// KOSA 한국AI, 소프트웨어협회 ( 다양한 양질의 교육 제공 정보 참고 )
+[https://www.sw.or.kr/site/sw/main.do](https://www.sw.or.kr/site/sw/main.do)        <br>
 [https://github.com/justforwork89/LMS-backend.git](https://github.com/justforwork89/LMS-backend.git) ( github  )<br>// 프로젝트 소스 저장소
 
 [https://devgym.oracle.com/](https://devgym.oracle.com/) ( 오라클 sql 학습 공간 )<br>// class → foundation (기본) → Next Level (심화)
