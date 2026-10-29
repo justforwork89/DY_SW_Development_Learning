@@ -3,7 +3,7 @@ filters:
     - file.inFolder("02 8주 스프린트")
     - file.ext == "md"
 formulas:
-  기간: 'if(시작일, 시작일.format("MM/DD") + " ~ " + 종료일.format("MM/DD"), "")'
+  기간: if(시작일, 시작일.format("MM/DD") + " ~ " + 종료일.format("MM/DD"), "")
 properties:
   file.name:
     displayName: 주차
