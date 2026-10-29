@@ -32,6 +32,8 @@ views:
     sort:
       - property: 시작일
         direction: ASC
+    columnSize:
+      note.phase: 121
   - type: table
     name: Phase별
     groupBy:

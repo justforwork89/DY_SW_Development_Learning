@@ -20,6 +20,8 @@ views:
       - 주요내용
       - 깃허브
     sort:
+      - property: 프로젝트
+        direction: DESC
       - property: 주차
         direction: ASC
   - type: table
