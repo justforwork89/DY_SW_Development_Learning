@@ -49,7 +49,7 @@ icon: "🏖️"
 
 [[javajungsuk4_sample_compressed]]
 
-// 자바의 정석
+// 자바의 정석 test
 
 [[DB·SQL 개념 이해 (정형 데이터 분석 입문)]]
 
