@@ -6,6 +6,8 @@
 .cm-table-widget td,
 .cm-table-widget th {
   word-break: keep-all;
+  /* 띄어쓰기 없는 긴 영문·코드(keyword="spring" 등)는 칸을 넘칠 때만 줄바꿈 */
+  overflow-wrap: anywhere;
 }
 
 /* 머리글(ID, 우선순위 등)과 첫 번째 열(LMS-001 같은 ID)은 한 줄로 */
