@@ -55,12 +55,12 @@ tags:
 
 ### 3.3 하드코딩·공통코드
 
-| ID | 구분 | 위치 | 지적 내용 | 개선 방향 | 심각도 | 조치 |
-| --- | --- | --- | --- | --- | --- | --- |
-| CR-09 | FE·BE | `api_course_repository.dart` `majors` | 전공 목록이 `['컴퓨터공학', '정보보안', '데이터분석']`로 고정되어 있다. 과정 등록, 사용자 관리, 과목 정보 조회, 수강신청 필터 4곳이 이 목록을 쓴다. 백엔드 공통코드에도 전공 그룹이 없다. | V8 마이그레이션으로 `MAJOR` 그룹 추가 → 로그인 후 `/api/codes/MAJOR`로 로드 | 중 | 미착수 |
-| CR-10 | FE | `models/course.dart`, `api_course_repository.dart` `_statusCodes` | 과정 상태 이름과 코드값(10~50)이 프론트에 고정되어 있다. DB의 `COURSE_STATUS` 공통코드를 쓰지 않아 코드명을 바꿔도 화면에 반영되지 않는다. | enum(업무 규칙·색상)은 유지하고 표시 이름만 `/api/codes/COURSE_STATUS`에서 로드 | 중 | 미착수 |
-| CR-11 | FE | `models/enrollment.dart`, `api_enrollment_repository.dart` | 수강 상태(신청·승인·반려)도 동일하게 고정되어 있다. | CR-10과 같은 방식 (선택) | 하 | 미착수 |
-| CR-12 | BE·FE | `EnrollmentService`, `SubmissionService` 등 | 상태 코드 `"10"`, `"20"`, `"30"`, `"40"`, `"50"`이 서비스 곳곳에 문자열로 흩어져 있다. | 백엔드에 상태 enum 또는 상수 클래스(`CourseStatus.RECRUITING` 등)를 두고 참조 | 하 | 미착수 |
+| ID    | 구분    | 위치                                                                | 지적 내용                                                                                                              | 개선 방향                                                       | 심각도 | 조치  |
+| ----- | ----- | ----------------------------------------------------------------- | ------------------------------------------------------------------------------------------------------------------ | ----------------------------------------------------------- | --- | --- |
+| CR-09 | FE·BE | `api_course_repository.dart` `majors`                             | 전공 목록이 `['컴퓨터공학', '정보보안', '데이터분석']`로 고정되어 있다. 과정 등록, 사용자 관리, 과목 정보 조회, 수강신청 필터 4곳이 이 목록을 쓴다. 백엔드 공통코드에도 전공 그룹이 없다. | V8 마이그레이션으로 `MAJOR` 그룹 추가 → 로그인 후 `/api/codes/MAJOR`로 로드    | 중   | 미착수 |
+| CR-10 | FE    | `models/course.dart`, `api_course_repository.dart` `_statusCodes` | 과정 상태 이름과 코드값(10~50)이 프론트에 고정되어 있다. DB의 `COURSE_STATUS` 공통코드를 쓰지 않아 코드명을 바꿔도 화면에 반영되지 않는다.                         | enum(업무 규칙·색상)은 유지하고 표시 이름만 `/api/codes/COURSE_STATUS`에서 로드 | 중   | 미착수 |
+| CR-11 | FE    | `models/enrollment.dart`, `api_enrollment_repository.dart`        | 수강 상태(신청·승인·반려)도 동일하게 고정되어 있다.                                                                                     | CR-10과 같은 방식 (선택)                                           | 하   | 미착수 |
+| CR-12 | BE·FE | `EnrollmentService`, `SubmissionService` 등                        | 상태 코드 `"10"`, `"20"`, `"30"`, `"40"`, `"50"`이 서비스 곳곳에 문자열로 흩어져 있다.                                                 | 백엔드에 상태 enum 또는 상수 클래스(`CourseStatus.RECRUITING` 등)를 두고 참조  | 하   | 미착수 |
 
 ### 3.4 프론트-백엔드 연동
 
