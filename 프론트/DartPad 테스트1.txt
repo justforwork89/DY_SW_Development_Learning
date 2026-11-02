@@ -1,0 +1,65 @@
+import 'package:flutter/material.dart';
+
+void main() {
+  runApp(const MaterialApp(home: EmpPage()));
+}
+
+class Emp {
+  String name;
+  String job;
+  int salary;
+  Emp(this.name, this.job, this.salary);
+}
+
+class EmpPage extends StatelessWidget {
+  const EmpPage({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    List<Emp> emps = [
+      Emp('김철수', '백엔드', 4200),
+      Emp('이영희', '프론트엔드', 4000),
+      Emp('박민수', '팀장', 6500),
+      Emp('최지은', '영업', 3800),
+    ];
+
+    return Scaffold(
+      appBar: AppBar(title: Text('사원 명부')),
+      body: Column(
+        children: [
+          // ① 부서 정보 영역
+          Container(
+            color: Colors.indigo.shade50,
+            padding: EdgeInsets.all(16),
+            child: Row(
+              children: [
+                Icon(Icons.apartment),
+                SizedBox(width: 8),
+                Text('개발팀', style: TextStyle(fontSize: 18)),
+                Spacer(),
+                Text('${emps.length}명'),
+              ],
+            ),
+          ),
+          // ② 사원 목록 (남은 자리 전부)
+          Expanded(
+            child: ListView(
+              padding: EdgeInsets.all(8),
+              children: [
+                for (var e in emps)
+                  Card(
+                    child: ListTile(
+                      leading: Icon(Icons.person),
+                      title: Text(e.name),
+                      subtitle: Text('${e.job} · ${e.salary}만원'),
+                      trailing: Icon(Icons.chevron_right),
+                    ),
+                  ),
+              ],
+            ),
+          ),
+        ],
+      ),
+    );
+  }
+}
