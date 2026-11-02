@@ -64,12 +64,12 @@ tags:
 
 ### 3.4 프론트-백엔드 연동
 
-| ID | 구분 | 위치 | 지적 내용 | 개선 방향 | 심각도 | 조치 |
-| --- | --- | --- | --- | --- | --- | --- |
-| CR-13 | FE | `AssignmentListViewModel`, `DashboardViewModel`, `ApiCourseRepository.save` | 강사의 담당 과정을 **이름**(`c.instructor == _user.name`)으로 판별하고, 저장할 때도 강사 이름으로 ID를 찾는다. 동명이인이 있으면 다른 강사의 과정이 섞이거나 잘못된 강사로 저장된다. | `Course` 모델에 `instructorId`를 추가하고 ID로 비교 (서버 응답에 이미 `instructorId` 있음) | 중 | 미착수 |
-| CR-14 | FE | `CourseFormViewModel` 생성자 | `_repository.instructors.first` — 로그인 직후 강사 목록 로드(`onLoggedIn`)가 실패해도 예외를 삼키므로 목록이 비어 있으면 과정 등록 화면을 열 때 `StateError`로 앱이 멈춘다. | 빈 목록 처리(선택 안 됨 상태) + 로드 실패 시 화면에서 재시도 | 중 | 미착수 |
-| CR-15 | FE | `api_common_code_repository.dart` `_fromJson` | 서버 응답의 `sortOrder`를 읽지 않아 모든 코드가 0으로 보이고, 그대로 수정하면 DB 정렬순서가 0으로 덮어써진다. (D-08) | `sortOrder: (j['sortOrder'] as num?)?.toInt() ?? 0` 추가 | 중 | 미착수 |
-| CR-16 | BE | `EnrollmentResponse` | 응답에 과정명·학생명이 없어 프론트가 과정·사용자 전체 목록을 추가로 불러와 매칭한다(`EnrollmentApprovalViewModel` 3회 호출). 남은 TODO 주석도 이미 처리된 내용이다. | 매퍼에서 `TB_COURSE`, `TB_USER` 조인해 courseName, studentName 포함 / TODO 주석 삭제 | 하 | 미착수 |
+| ID    | 구분  | 위치                                                                          | 지적 내용                                                                                                                         | 개선 방향                                                                   | 심각도 | 조치  |
+| ----- | --- | --------------------------------------------------------------------------- | ----------------------------------------------------------------------------------------------------------------------------- | ----------------------------------------------------------------------- | --- | --- |
+| CR-13 | FE  | `AssignmentListViewModel`, `DashboardViewModel`, `ApiCourseRepository.save` | 강사의 담당 과정을 **이름**(`c.instructor == _user.name`)으로 판별하고, 저장할 때도 강사 이름으로 ID를 찾는다. 동명이인이 있으면 다른 강사의 과정이 섞이거나 잘못된 강사로 저장된다.       | `Course` 모델에 `instructorId`를 추가하고 ID로 비교 (서버 응답에 이미 `instructorId` 있음)  | 중   | 미착수 |
+| CR-14 | FE  | `CourseFormViewModel` 생성자                                                   | `_repository.instructors.first` — 로그인 직후 강사 목록 로드(`onLoggedIn`)가 실패해도 예외를 삼키므로 목록이 비어 있으면 과정 등록 화면을 열 때 `StateError`로 앱이 멈춘다. | 빈 목록 처리(선택 안 됨 상태) + 로드 실패 시 화면에서 재시도                                   | 중   | 미착수 |
+| CR-15 | FE  | `api_common_code_repository.dart` `_fromJson`                               | 서버 응답의 `sortOrder`를 읽지 않아 모든 코드가 0으로 보이고, 그대로 수정하면 DB 정렬순서가 0으로 덮어써진다. (D-08)                                                 | `sortOrder: (j['sortOrder'] as num?)?.toInt() ?? 0` 추가                  | 중   | 미착수 |
+| CR-16 | BE  | `EnrollmentResponse`                                                        | 응답에 과정명·학생명이 없어 프론트가 과정·사용자 전체 목록을 추가로 불러와 매칭한다(`EnrollmentApprovalViewModel` 3회 호출). 남은 TODO 주석도 이미 처리된 내용이다.                | 매퍼에서 `TB_COURSE`, `TB_USER` 조인해 courseName, studentName 포함 / TODO 주석 삭제 | 하   | 미착수 |
 
 ### 3.5 오류 처리
 
