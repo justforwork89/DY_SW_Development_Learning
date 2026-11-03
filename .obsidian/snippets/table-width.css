@@ -17,3 +17,8 @@
 .cm-table-widget td:first-child {
   white-space: nowrap;
 }
+
+/* cssclasses: wide 를 지정한 문서는 본문 폭 제한 해제 (컬럼 많은 표용) */
+.wide {
+  --file-line-width: 100%;
+}
