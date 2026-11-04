@@ -1,8 +1,8 @@
 ---
 notion-bases: true
 schema:
-  - id: 날짜
-    name: 날짜
+  - id: 시작일
+    name: 시작일
     type: date
     visible: true
     width: 140
@@ -39,13 +39,13 @@ views:
     name: 달력
     calendarViewMode: month
     includeSubfolders: false
-    calendarDateField: 날짜
+    calendarDateField: 시작일
     calendarEndDateField: 종료일
   - id: default
     type: table
     filters: []
     sorts:
-      - columnId: 날짜
+      - columnId: 시작일
         direction: asc
     hiddenColumns: []
     columnWidths: {}
