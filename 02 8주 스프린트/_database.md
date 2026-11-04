@@ -66,8 +66,28 @@ views:
     columnWidths:
       _title: 121
       주차: 125
-      시작일: 106
+      시작일: 141
+      종료일: 151
     pinnedColumnId:
+  - id: b1a176ef-4475-46e1-9e7d-7cc11def36bf
+    type: calendar
+    filters: []
+    sorts: []
+    hiddenColumns:
+      - 주차
+      - phase
+      - 주제
+      - 학습목표
+      - 진척률
+      - 일가용시간
+      - tags
+      - 주간산출물
+    columnWidths: {}
+    pinnedColumnId:
+    name: Calendar
+    calendarViewMode: month
+    includeSubfolders: true
+    cardTitleField: 종료일
 ---
 
 > [!tip] Notion Bases
