@@ -86,8 +86,8 @@ views:
     pinnedColumnId:
     name: Calendar
     calendarViewMode: month
-    includeSubfolders: true
-    cardTitleField: 종료일
+    includeSubfolders: false
+    cardTitleField: 시작일
 ---
 
 > [!tip] Notion Bases
