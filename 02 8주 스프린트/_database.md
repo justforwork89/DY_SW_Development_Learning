@@ -69,25 +69,24 @@ views:
       시작일: 141
       종료일: 151
     pinnedColumnId:
-  - id: b1a176ef-4475-46e1-9e7d-7cc11def36bf
+  - id: 73c25a66-a38c-4ca8-bc15-d944549c05f9
+    type: timeline
+    filters: []
+    sorts: []
+    hiddenColumns: []
+    columnWidths: {}
+    pinnedColumnId:
+    name: Timeline
+  - id: b4636577-aabc-4350-99cf-99cdb26c2e35
     type: calendar
     filters: []
     sorts: []
-    hiddenColumns:
-      - 주차
-      - phase
-      - 주제
-      - 학습목표
-      - 진척률
-      - 일가용시간
-      - tags
-      - 주간산출물
+    hiddenColumns: []
     columnWidths: {}
     pinnedColumnId:
     name: Calendar
     calendarViewMode: month
-    includeSubfolders: false
-    cardTitleField: 시작일
+    includeSubfolders: true
 ---
 
 > [!tip] Notion Bases
