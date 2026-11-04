@@ -1,0 +1,25 @@
+filters:
+  and:
+    - file.inFolder("04 일정")
+    - file.ext == "md"
+    - file.name != "_database"
+views:
+  - type: calendar
+    name: 달력
+    startDate: note.시작일
+    endDate: note.종료일
+    weekStartDay: sunday
+    order:
+      - file.name
+      - 구분
+  - type: table
+    name: 목록
+    order:
+      - file.name
+      - 시작일
+      - 종료일
+      - 구분
+      - 메모
+    sort:
+      - property: 시작일
+        direction: ASC
