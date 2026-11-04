@@ -1,0 +1,9 @@
+{
+  "id": "schedule-colors",
+  "name": "일정 색상",
+  "version": "1.0.0",
+  "minAppVersion": "1.10.0",
+  "description": "Calendar Bases 달력의 일정 카드를 '구분' 또는 '색상' 속성에 따라 색칠합니다.",
+  "author": "custom",
+  "isDesktopOnly": false
+}
