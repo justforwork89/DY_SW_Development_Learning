@@ -65,6 +65,8 @@ views:
     hiddenColumns: []
     columnWidths:
       _title: 121
+      주차: 125
+      시작일: 106
     pinnedColumnId:
 ---
 
