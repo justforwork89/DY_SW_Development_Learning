@@ -5,6 +5,8 @@
     "진척률": "number",
     "일가용시간": "number",
     "tags": "tags",
-    "aliases": "aliases"
+    "aliases": "aliases",
+    "cssclasses": "multitext",
+    "날짜": "date"
   }
 }
