@@ -92,6 +92,7 @@ views:
     includeSubfolders: true
     calendarEndDateField: 시작일
     cardTitleField: 주차
+    activePills: []
 ---
 
 > [!tip] Notion Bases
