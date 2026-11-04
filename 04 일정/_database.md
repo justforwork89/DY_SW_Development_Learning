@@ -61,6 +61,7 @@ views:
     name: Timeline
     timelineStartField: 시작일
     timelineEndField: 종료일
+    timelineGroupByField: 구분
 ---
 
 > [!tip] Notion Bases
