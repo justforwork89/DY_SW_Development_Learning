@@ -37,7 +37,7 @@ views:
     columnWidths: {}
     pinnedColumnId:
     name: 달력
-    calendarViewMode: week
+    calendarViewMode: month
     includeSubfolders: false
     calendarDateField: 시작일
     calendarEndDateField: 종료일
@@ -51,6 +51,16 @@ views:
     columnWidths: {}
     pinnedColumnId:
     name: 목록
+  - id: c8fa1cf6-c859-4f5c-8919-9f3cacd088bb
+    type: timeline
+    filters: []
+    sorts: []
+    hiddenColumns: []
+    columnWidths: {}
+    pinnedColumnId:
+    name: Timeline
+    timelineStartField: 시작일
+    timelineEndField: 종료일
 ---
 
 > [!tip] Notion Bases
