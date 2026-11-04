@@ -22,12 +22,12 @@ schema:
     width: 200
   - id: 시작일
     name: 시작일
-    type: text
+    type: date
     visible: true
     width: 200
   - id: 종료일
     name: 종료일
-    type: text
+    type: date
     visible: true
     width: 200
   - id: 학습목표
@@ -87,6 +87,8 @@ views:
     name: Calendar
     calendarViewMode: month
     includeSubfolders: true
+    calendarEndDateField: 종료일
+    cardTitleField: 주차
 ---
 
 > [!tip] Notion Bases
