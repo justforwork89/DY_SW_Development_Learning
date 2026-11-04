@@ -6,12 +6,12 @@ filters:
 views:
   - type: calendar
     name: 달력
-    startDate: note.시작일
-    endDate: note.종료일
-    weekStartDay: sunday
     order:
       - file.name
       - 구분
+    startDate: note.시작일
+    endDate: note.종료일
+    weekStartDay: sunday
   - type: table
     name: 목록
     order:
