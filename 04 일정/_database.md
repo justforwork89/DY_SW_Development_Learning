@@ -37,7 +37,7 @@ views:
     columnWidths: {}
     pinnedColumnId:
     name: 달력
-    calendarViewMode: month
+    calendarViewMode: week
     includeSubfolders: false
     calendarDateField: 시작일
     calendarEndDateField: 종료일
