@@ -1,0 +1,18 @@
+/* 일정 색상: Calendar Bases 일정 카드를 진한 색 블록 + 흰 글씨로 */
+.fc-event[data-schedule-color]:not([data-schedule-color="none"]) {
+  border-radius: 4px !important;
+  padding: 2px 6px !important;
+  box-shadow: none !important;
+}
+.fc-event[data-schedule-color]:not([data-schedule-color="none"]) * {
+  color: inherit !important;
+  background: transparent !important;
+}
+.fc-event[data-schedule-color] .bases-calendar-event-title {
+  font-weight: 600;
+  font-size: 0.85em;
+}
+.fc-event[data-schedule-color] .bases-calendar-event-properties {
+  font-size: 0.75em;
+  opacity: 0.9;
+}
