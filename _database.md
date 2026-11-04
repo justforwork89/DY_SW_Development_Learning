@@ -15,7 +15,7 @@ views:
     columnWidths:
       _title: 207
     pinnedColumnId:
-    includeSubfolders: false
+    includeSubfolders: true
     wrapText: false
 ---
 
