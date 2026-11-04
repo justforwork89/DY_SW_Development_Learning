@@ -77,6 +77,9 @@ views:
     columnWidths: {}
     pinnedColumnId:
     name: Timeline
+    timelineStartField: 시작일
+    timelineEndField: 종료일
+    timelineGroupByField: phase
   - id: b4636577-aabc-4350-99cf-99cdb26c2e35
     type: calendar
     filters: []
@@ -85,9 +88,9 @@ views:
     columnWidths: {}
     pinnedColumnId:
     name: Calendar
-    calendarViewMode: month
+    calendarViewMode: week
     includeSubfolders: true
-    calendarEndDateField: 종료일
+    calendarEndDateField: 시작일
     cardTitleField: 주차
 ---
 
