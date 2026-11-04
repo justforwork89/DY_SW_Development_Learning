@@ -15,7 +15,8 @@ views:
     columnWidths:
       _title: 207
     pinnedColumnId:
-    includeSubfolders: true
+    includeSubfolders: false
+    wrapText: false
 ---
 
 > [!tip] Notion Bases
