@@ -1,7 +1,7 @@
 {
   "project": "LMS 미니",
   "student": "",
-  "updated": "2026-11-05 15:01",
+  "updated": "2026-11-05 15:20",
   "session_start": "2026-11-05 14:56",
   "session_end": "",
   "limit_min": 60,
@@ -18,7 +18,7 @@
       "score": null,
       "star_fail": 0,
       "feedback": "",
-      "next": "기능 3개를 정한 뒤 '가이드 1'",
+      "next": "Obsidian에서 '01_프로젝트계획서_v0.1' 노트 만들고 '가이드 1'",
       "actual_min": 0,
       "working_since": "",
       "work_log": [],
