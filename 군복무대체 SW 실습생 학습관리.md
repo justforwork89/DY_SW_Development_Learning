@@ -56,5 +56,11 @@ icon: "🏖️"
 [[자료구조 이해]]
 [[DB 모델링 학습노트 (5일 과정)]]
 
+// IT위키
+https://itwiki.kr/w/%EB%8C%80%EB%AC%B8
+
+// 학점은행제 무료강의
+
+
 // 자바의 정석
 ![[javajungsuk_basic_요약집.pdf]]
