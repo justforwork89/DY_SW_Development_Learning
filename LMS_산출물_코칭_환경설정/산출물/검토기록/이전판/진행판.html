@@ -1,0 +1,67 @@
+<!DOCTYPE html><html lang="ko"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta http-equiv="refresh" content="5"><title>LMS 산출물 진행판</title></head><body>
+<style>
+:root{--bg:#f7f8fa;--card:#fff;--ink:#1f2933;--sub:#5f6b7a;--line:#e1e5ea;--blue:#1d4ed8;--blueb:#dbeafe;--amb:#92400e;--ambb:#fef3c7;--red:#b91c1c;--redb:#fee2e2;--grn:#166534;--grnb:#dcfce7;--gry:#475569;--gryb:#e2e8f0}
+@media(prefers-color-scheme:dark){:root{--bg:#0f1419;--card:#1a212b;--ink:#e6ebf1;--sub:#9aa7b6;--line:#2a3441;--blue:#93c5fd;--blueb:#1e3a8a;--amb:#fcd34d;--ambb:#4a3a0a;--red:#fca5a5;--redb:#5b1a1a;--grn:#86efac;--grnb:#14532d;--gry:#cbd5e1;--gryb:#334155}}
+*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--ink);font:14px/1.5 system-ui,"Malgun Gothic",sans-serif}
+.wrap{max-width:960px;margin:0 auto;padding:16px}
+h1{font-size:20px;margin:0 0 2px}.sub{color:var(--sub);font-size:13px;margin-bottom:14px}
+.top{display:grid;grid-template-columns:repeat(auto-fit,minmax(150px,1fr));gap:10px;margin-bottom:14px}
+.stat{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:10px 12px}
+.stat b{display:block;font-size:22px}.stat span{color:var(--sub);font-size:12px}
+.bar{height:8px;background:var(--line);border-radius:6px;overflow:hidden;margin-top:6px}.bar i{display:block;height:100%;background:var(--blue)}.bar i.over{background:var(--red)}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(280px,1fr));gap:10px}
+.card{background:var(--card);border:1px solid var(--line);border-radius:10px;padding:12px}.card.now{border:2px solid var(--blue)}
+.card h3{font-size:15px;margin:0 0 6px;display:flex;justify-content:space-between;gap:8px;align-items:center}
+.badge{font-size:12px;font-weight:600;padding:2px 8px;border-radius:999px;white-space:nowrap}
+.s0{background:var(--gryb);color:var(--gry)}.s1{background:var(--blueb);color:var(--blue)}.s3{background:var(--redb);color:var(--red)}.s4{background:var(--grnb);color:var(--grn)}
+.meta{color:var(--sub);font-size:12px;margin-bottom:6px}.late{color:var(--red);font-weight:600}
+.row{margin:4px 0;font-size:13px}.row b{color:var(--sub);font-weight:600}
+details{margin-top:6px;font-size:12px;color:var(--sub)}
+h2{font-size:15px;margin:18px 0 8px}
+table{width:100%;border-collapse:collapse;background:var(--card);border:1px solid var(--line);border-radius:10px;overflow:hidden}
+td,th{padding:7px 10px;border-bottom:1px solid var(--line);text-align:left;font-size:13px}th{color:var(--sub);font-weight:600;background:var(--bg)}
+.ok{color:var(--grn);font-weight:600}.warn{color:var(--red);font-weight:600}.na{color:var(--sub)}
+</style>
+<div class="wrap" id="app"></div>
+<script>
+const DATA=/*DATA_START*/{"project": "LMS 미니", "student": "", "updated": "2026-11-05 15:50", "session_start": "2026-11-05 14:56", "session_end": "", "limit_min": 60, "features": [], "docs": [{"no": 1, "id": "PLAN", "name": "프로젝트 계획서", "image": "구성도", "slot": "0:01~0:06", "est_min": 5, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "실제 요구사항(LMS-001~012)에서 기능 3개 고르고 '가이드 1'", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 2, "id": "REQ", "name": "요구사항 정의서", "slot": "0:06~0:13", "est_min": 7, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 5, "id": "DB", "name": "테이블 정의서", "image": "ERD", "slot": "0:13~0:26", "est_min": 13, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 3, "id": "SCR", "name": "화면 설계서", "image": "메뉴 흐름·화면 스케치", "slot": "0:26~0:39", "est_min": 13, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 4, "id": "API", "name": "API 명세서", "slot": "0:39~0:45", "est_min": 6, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 6, "id": "TEST", "name": "시험 결과서(시험 계획)", "slot": "0:45~0:52", "est_min": 7, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}, {"no": 7, "id": "FINAL", "name": "완료 보고서", "slot": "0:52~0:56", "est_min": 4, "status": "미착수", "score": null, "star_fail": 0, "feedback": "", "next": "", "actual_min": 0, "working_since": "", "work_log": [], "history": []}], "consistency": [{"check": "요구사항 ↔ 화면·API", "result": "NA", "note": ""}, {"check": "화면 버튼의 API ID ↔ API 명세서", "result": "NA", "note": ""}, {"check": "API 필드 ↔ 테이블 컬럼", "result": "NA", "note": ""}, {"check": "요구사항 ↔ 시험 케이스", "result": "NA", "note": ""}, {"check": "코드값 ↔ 공통코드", "result": "NA", "note": ""}, {"check": "테이블 정의서 ↔ 실제 DDL (7개·40개)", "result": "NA", "note": ""}, {"check": "화면 목록 ↔ 실제 메뉴구조도 (13개)", "result": "NA", "note": ""}]}/*DATA_END*/;
+const esc=s=>String(s==null?"":s).replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const CLS={"미착수":"s0","작성중":"s1","보완필요":"s3","완료":"s4"};
+const grade=s=>s>=95?"S":s>=85?"A":s>=70?"B":s>=50?"C":"D";
+const mn=v=>Math.round(Number(v)||0)+"분";
+const kst=t=>t?Date.parse(t.replace(" ","T")+":00+09:00"):NaN;
+function render(){
+  const docs=DATA.docs||[],n=docs.length||1,lim=DATA.limit_min||60;
+  const done=docs.filter(d=>d.status==="완료").length;
+  const sc=docs.filter(d=>typeof d.score==="number");
+  const avg=sc.length?Math.round(sc.reduce((a,d)=>a+d.score,0)/sc.length):null;
+  const st=kst(DATA.session_start),en=kst(DATA.session_end);
+  const el=isNaN(st)?null:Math.max(0,Math.floor(((isNaN(en)?Date.now():en)-st)/60000));
+  const totEst=docs.reduce((a,d)=>a+(Number(d.est_min)||0),0),totAct=docs.reduce((a,d)=>a+(Number(d.actual_min)||0),0);
+  let h='<h1>'+esc(DATA.project)+' 산출물 진행판 (1시간)</h1><div class="sub">'+(DATA.student?esc(DATA.student)+' · ':'')+'기능: '+(esc((DATA.features||[]).join(", "))||'아직 안 정함')+' · 갱신 '+esc(DATA.updated)+'</div>';
+  h+='<div class="top"><div class="stat"><b class="'+(el>lim?"late":"")+'">'+(el==null?"시작 전":el+"분 / "+lim+"분")+'</b><span>세션 경과 시간'+(isNaN(en)?'':' (종료)')+'</span><div class="bar"><i class="'+(el>lim?"over":"")+'" style="width:'+Math.min(100,el==null?0:Math.round(el/lim*100))+'%"></i></div></div>';
+  h+='<div class="stat"><b>'+done+' / '+docs.length+'</b><span>완료한 산출물</span><div class="bar"><i style="width:'+Math.round(done/n*100)+'%"></i></div></div>';
+  h+='<div class="stat"><b>'+(avg==null?"-":avg+"점 ("+grade(avg)+")")+'</b><span>검토 평균 점수</span></div>';
+  h+='<div class="stat"><b>'+mn(totAct)+' / '+mn(totEst)+'</b><span>실제 / 예상 작성 시간</span></div></div>';
+  h+='<div class="grid">';
+  docs.forEach((d,i)=>{
+    const over=(Number(d.actual_min)||0)>(Number(d.est_min)||0)+2;
+    h+='<div class="card'+(d.working_since?' now':'')+'"><h3><span>'+(i+1)+'. '+esc(d.name)+'</span><span class="badge '+(CLS[d.status]||"s0")+'">'+esc(d.status)+'</span></h3>';
+    h+='<div class="meta">목표 '+esc(d.slot)+' · 점수 '+(typeof d.score==="number"?esc(d.score)+'점 ('+grade(d.score)+')':'-')+(d.star_fail?' · 필수 미흡 '+esc(d.star_fail)+'개':'')+'</div>';
+    h+='<div class="row"><b>시간</b> 예상 '+mn(d.est_min)+' · 실제 '+mn(d.actual_min)+(over?' <span class="late">· 시간 초과</span>':'')+(d.working_since?' · <span class="badge s1">지금 작성 중 ('+esc(d.working_since)+'~)</span>':'')+'</div>';
+    if(d.image){h+='<div class="row"><b>그림</b> 🖼 '+esc(d.image)+' · '+(d.image_ok===true?'<span class="ok">확인됨</span>':d.image_ok===false?'<span class="warn">확인 필요</span>':'검토 전')+'</div>';}
+    h+='<div class="row"><b>피드백</b> '+(esc(d.feedback)||'-')+'</div><div class="row"><b>다음 할 일</b> '+(esc(d.next)||'-')+'</div>';
+    if((d.history||[]).length){h+='<details><summary>검토 '+d.history.length+'회</summary>'+d.history.map(x=>'<div>'+esc(x.time)+' · '+esc(x.score)+'점 · '+esc(x.note)+'</div>').join('')+'</details>';}
+    h+='</div>';
+  });
+  h+='</div><h2>마무리 점검 (문서끼리 맞는지)</h2><table><tr><th>점검</th><th>결과</th><th>메모</th></tr>';
+  (DATA.consistency||[]).forEach(c=>{
+    const t=c.result==="OK"?'<span class="ok">일치</span>':c.result==="WARN"?'<span class="warn">확인 필요</span>':'<span class="na">아직 점검 전</span>';
+    h+='<tr><td>'+esc(c.check)+'</td><td>'+t+'</td><td>'+esc(c.note)+'</td></tr>';
+  });
+  h+='</table>';
+  document.getElementById("app").innerHTML=h;
+}
+render();setInterval(render,30000);
+</script>
+</body></html>
