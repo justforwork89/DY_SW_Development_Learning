@@ -59,8 +59,10 @@ icon: "🏖️"
 // IT위키
 https://itwiki.kr/w/%EB%8C%80%EB%AC%B8
 
-// 학점은행제 무료강의 (특정 모집 시기 존재)
+// 학점은행제 무료강의 (리뷰 참고)
 https://www.kmooc.kr/edubank/course_list?status=all
+// 학습은행제 k-mooc 리뷰
+https://contents.premium.naver.com/worthwhile00/worthwhile/contents/250526154102054mc
 
 // 자바의 정석
 ![[javajungsuk_basic_요약집.pdf]]
