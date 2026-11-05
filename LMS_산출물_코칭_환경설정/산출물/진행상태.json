@@ -1,7 +1,7 @@
 {
   "project": "LMS 미니",
   "student": "",
-  "updated": "2026-11-05 15:30",
+  "updated": "2026-11-05 15:50",
   "session_start": "2026-11-05 14:56",
   "session_end": "",
   "limit_min": 60,
@@ -18,7 +18,7 @@
       "score": null,
       "star_fail": 0,
       "feedback": "",
-      "next": "Obsidian에서 '01_프로젝트계획서_v0.1' 노트 만들고 '가이드 1'",
+      "next": "실제 요구사항(LMS-001~012)에서 기능 3개 고르고 '가이드 1'",
       "actual_min": 0,
       "working_since": "",
       "work_log": [],
@@ -125,7 +125,7 @@
   ],
   "consistency": [
     {
-      "check": "요구사항(FR) ↔ 화면·API",
+      "check": "요구사항 ↔ 화면·API",
       "result": "NA",
       "note": ""
     },
@@ -140,12 +140,22 @@
       "note": ""
     },
     {
-      "check": "요구사항(FR) ↔ 시험 케이스",
+      "check": "요구사항 ↔ 시험 케이스",
       "result": "NA",
       "note": ""
     },
     {
       "check": "코드값 ↔ 공통코드",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "테이블 정의서 ↔ 실제 DDL (7개·40개)",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "화면 목록 ↔ 실제 메뉴구조도 (13개)",
       "result": "NA",
       "note": ""
     }
