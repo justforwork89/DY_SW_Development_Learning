@@ -12,9 +12,10 @@
    - Claude(Cowork)의 **프로젝트 지침/프로젝트 문서**
    - Claude Code를 쓴다면 작업 폴더 맨 위의 **`CLAUDE.md`**(이 파일 내용을 붙여 넣거나 이름을 바꿔 저장)
 3. Claude에게 **`시작`** 이라고 말해요. Claude가 폴더를 만들고 진행판을 열어 줘요.
-4. 학생은 Word로 문서를 쓰고 **같은 폴더에 저장**한 뒤 Claude에게 **`검토 2`**(요구사항 정의서)처럼 말해요.
+4. 학생은 문서를 쓰기 전에 **`작업시작 2`**, 끝나면 **`작업종료 2`** 라고 말해요. Claude가 실제 작업시간을 기록해요.
+5. 학생은 Word로 문서를 쓰고 **같은 폴더에 저장**한 뒤 Claude에게 **`검토 2`**(요구사항 정의서)처럼 말해요.
 
-> 교육 담당자는 이 파일의 "9. 점검표(채점표)"와 "7. 완료 기준"을 사업 상황에 맞게 고쳐서 쓸 수 있어요.
+> 교육 담당자는 이 파일의 "8. 채점표", "7. 완료 기준", "2. 예상 작업시간"을 사업 상황에 맞게 고쳐서 쓸 수 있어요.
 
 ---
 
@@ -41,15 +42,17 @@
 - **기간**: 8주
 - **산출물 7종** (아래 번호를 명령어에 써요)
 
-| 번호 | 코드 | 산출물 | 파일 이름(권장) | 마감 주차 |
-|---|---|---|---|---|
-| 1 | PLAN | 프로젝트 계획서 (일정·구성도 포함) | `01_프로젝트계획서_v0.1.docx` | 1주 |
-| 2 | REQ | 요구사항 정의서 (추적 열 포함) | `02_요구사항정의서_v0.1.docx` | 2주 |
-| 3 | SCR | 화면 설계서 | `03_화면설계서_v0.1.docx` | 3주 |
-| 4 | API | API 명세서 | `04_API명세서_v0.1.docx` | 3주 |
-| 5 | DB | 테이블 정의서 (ERD·공통코드 포함) | `05_테이블정의서_v0.1.docx` | 3주 |
-| 6 | TEST | 시험 결과서 (단위·통합 한 파일) | `06_시험결과서_v0.1.docx` | 7주 |
-| 7 | FINAL | 완료 보고서 | `07_완료보고서_v0.1.docx` | 8주 |
+| 번호 | 코드 | 산출물 | 파일 이름(권장) | 마감 주차 | 예상 작업시간 |
+|---|---|---|---|---|---|
+| 1 | PLAN | 프로젝트 계획서 (일정·구성도 포함) | `01_프로젝트계획서_v0.1.docx` | 1주 | 8시간 |
+| 2 | REQ | 요구사항 정의서 (추적 열 포함) | `02_요구사항정의서_v0.1.docx` | 2주 | 12시간 |
+| 3 | SCR | 화면 설계서 | `03_화면설계서_v0.1.docx` | 3주 | 16시간 |
+| 4 | API | API 명세서 | `04_API명세서_v0.1.docx` | 3주 | 12시간 |
+| 5 | DB | 테이블 정의서 (ERD·공통코드 포함) | `05_테이블정의서_v0.1.docx` | 3주 | 12시간 |
+| 6 | TEST | 시험 결과서 (단위·통합 한 파일) | `06_시험결과서_v0.1.docx` | 7주 | 16시간 |
+| 7 | FINAL | 완료 보고서 | `07_완료보고서_v0.1.docx` | 8주 | 6시간 |
+
+> **예상 작업시간**은 문서를 쓰는 데 드는 시간의 *교육용 예시값*이에요(합계 82시간, 개발 시간은 빼고 문서 작성·보완 시간만). 정답이 아니니 교육 담당자가 학생 수준에 맞게 바꿔요. 값을 바꾸면 `진행상태.json`의 `est_hours`도 같이 바꿔요.
 
 **추천 작업 순서**: 1 → 2 → 5 → 3 → 4 → (개발·시험 병행) 6 → 7
 (요구사항이 나와야 DB·화면을 만들 수 있고, 화면과 DB가 있어야 API를 정할 수 있어요.)
@@ -90,19 +93,26 @@ Claude는 연결된 작업 폴더 안에 아래 구조를 만들고(없을 때�
   "week": 1,
   "docs": [
     {"no":1,"id":"PLAN","name":"프로젝트 계획서","file":"01_프로젝트계획서_v0.1.docx","week_due":1,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":8,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":2,"id":"REQ","name":"요구사항 정의서","file":"02_요구사항정의서_v0.1.docx","week_due":2,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":12,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":3,"id":"SCR","name":"화면 설계서","file":"03_화면설계서_v0.1.docx","week_due":3,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":16,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":4,"id":"API","name":"API 명세서","file":"04_API명세서_v0.1.docx","week_due":3,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":12,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":5,"id":"DB","name":"테이블 정의서","file":"05_테이블정의서_v0.1.docx","week_due":3,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":12,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":6,"id":"TEST","name":"시험 결과서","file":"06_시험결과서_v0.1.docx","week_due":7,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]},
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":16,"actual_hours":0,"working_since":"","work_log":[],"history":[]},
     {"no":7,"id":"FINAL","name":"완료 보고서","file":"07_완료보고서_v0.1.docx","week_due":8,
-     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"","history":[]}
+     "status":"미착수","score":null,"star_fail":0,"feedback":"","next":"",
+     "est_hours":6,"actual_hours":0,"working_since":"","work_log":[],"history":[]}
   ],
   "consistency": [
     {"check":"요구사항 ↔ 화면·API","result":"NA","note":""},
@@ -122,7 +132,21 @@ Claude는 연결된 작업 폴더 안에 아래 구조를 만들고(없을 때�
 - `feedback`: 최근 피드백 **한 줄 요약**
 - `next`: 학생이 다음에 할 일 **한 줄**
 - `history`: 검토 때마다 `{"date":"2026-11-04","score":72,"note":"한 줄"}` 를 추가
+- `est_hours`: **예상 작업시간**(시간). 2번 표의 값을 넣어요
+- `actual_hours`: **실제 소요시간**(시간). `work_log`의 `hours`를 모두 더한 값이에요(소수 첫째 자리까지)
+- `working_since`: 지금 작업 중이면 시작 시각(`"2026-11-05 14:00"`), 아니면 `""`
+- `work_log`: 작업할 때마다 `{"start":"2026-11-05 14:00","end":"2026-11-05 16:30","hours":2.5,"how":"기록"}` 를 추가. `how`는 `기록`(작업시작·작업종료로 잰 것) 또는 `직접입력`(학생이 시간을 말한 것)
 - `consistency.result`: `OK` / `WARN` / `NA`(아직 점검 못 함)
+
+### 4-1. 작업시간 기록 규칙
+- **실제 소요시간은 학생이 알려 준 것만 기록해요.** Word 파일의 수정 시각으로 시간을 짐작해서 채우지 않아요.
+- `작업시작 N`: 지금 시각을 `working_since`에 적어요. 이미 다른 문서가 작업 중이면 그 문서를 먼저 끝낼지 물어봐요.
+- `작업종료 N`: `working_since`부터 지금까지를 시간으로 계산해 `work_log`에 추가하고, `actual_hours`를 다시 더하고, `working_since`를 비워요.
+- `시간 N 2.5`: 기록을 깜빡했을 때 학생이 말한 시간을 `직접입력`으로 추가해요.
+- 시작한 지 **12시간이 넘었는데** 종료가 없으면 끝난 시각을 학생에게 물어봐요. 마음대로 계산하지 않아요.
+- 쉬는 시간이 길었다면(30분 이상) 빼고 기록할지 학생에게 물어봐요.
+- 검토 뒤 고치는(보완) 시간도 같은 문서의 실제 소요시간에 더해요.
+- 실제 시간이 예상의 **1.2배를 넘으면** 진행판에 "예상 초과"로 보여 주고, 피드백에서 막힌 곳이 있는지 물어봐요(꾸짖지 않아요).
 
 ---
 
@@ -143,7 +167,7 @@ Claude는 연결된 작업 폴더 안에 아래 구조를 만들고(없을 때�
 
 ### 5-2. 갱신 규칙
 
-- 아래 일이 있을 때마다 `진행상태.json`을 고치고 **진행판을 다시 만들어요**: `시작`, 검토 완료, 상태 변경, `현황`, 문서 간 점검 완료
+- 아래 일이 있을 때마다 `진행상태.json`을 고치고 **진행판을 다시 만들어요**: `시작`, 검토 완료, 상태 변경, `현황`, 문서 간 점검 완료, `작업시작`·`작업종료`·`시간` 기록
 - 다시 만들 때는 5-3 코드에서 `/*DATA_START*/ … /*DATA_END*/` **사이만** `진행상태.json` 내용으로 바꿔요. 나머지 코드는 건드리지 않아요.
 
 ### 5-3. 진행판 코드 (본문 조각)
@@ -184,16 +208,22 @@ const sc=docs.filter(d=>typeof d.score==="number");
 const avg=sc.length?Math.round(sc.reduce((a,d)=>a+d.score,0)/sc.length):null;
 const late=docs.filter(d=>d.status!=="완료"&&DATA.week>d.week_due).length;
 const pct=Math.round(done/n*100);
+const hr=v=>(Math.round((Number(v)||0)*10)/10)+"시간";
+const totEst=docs.reduce((a,d)=>a+(Number(d.est_hours)||0),0),totAct=docs.reduce((a,d)=>a+(Number(d.actual_hours)||0),0);
 let h='<h1>'+esc(DATA.project)+' 산출물 진행판</h1><div class="sub">'+esc(DATA.student)+' · '+esc(DATA.week)+'주차 · 갱신 '+esc(DATA.updated)+'</div>';
 h+='<div class="top"><div class="stat"><b>'+done+' / '+docs.length+'</b><span>완료한 산출물</span><div class="bar"><i style="width:'+pct+'%"></i></div></div>';
 h+='<div class="stat"><b>'+(avg==null?"-":avg+"점 ("+grade(avg)+")")+'</b><span>검토 평균 점수</span></div>';
-h+='<div class="stat"><b class="'+(late?"late":"")+'">'+late+'</b><span>마감 주차 지난 산출물</span></div></div>';
+h+='<div class="stat"><b class="'+(late?"late":"")+'">'+late+'</b><span>마감 주차 지난 산출물</span></div>';
+h+='<div class="stat"><b>'+hr(totAct)+' / '+hr(totEst)+'</b><span>실제 / 예상 작업시간</span><div class="bar"><i style="width:'+Math.min(100,totEst?Math.round(totAct/totEst*100):0)+'%"></i></div></div></div>';
 h+='<div class="grid">';
 docs.forEach(d=>{
   const isLate=d.status!=="완료"&&DATA.week>d.week_due;
   h+='<div class="card"><h3><span>'+esc(d.no)+'. '+esc(d.name)+'</span><span class="badge '+(CLS[d.status]||"s0")+'">'+esc(d.status)+'</span></h3>';
   h+='<div class="meta">마감 '+esc(d.week_due)+'주차'+(isLate?' <span class="late">· 기한 지남</span>':'')+' · 점수 '+(typeof d.score==="number"?esc(d.score)+'점 ('+grade(d.score)+')':'-')+(d.star_fail?' · 필수 항목 미흡 '+esc(d.star_fail)+'개':'')+'</div>';
+  const over=d.est_hours&&d.actual_hours>d.est_hours*1.2;
+  h+='<div class="row"><b>작업시간</b> 예상 '+hr(d.est_hours)+' · 실제 '+hr(d.actual_hours)+(over?' <span class="late">· 예상 초과</span>':'')+(d.working_since?' · <span class="badge s1">작업 중 (시작 '+esc(d.working_since)+')</span>':'')+'</div>';
   h+='<div class="row"><b>피드백</b> '+(esc(d.feedback)||'-')+'</div><div class="row"><b>다음 할 일</b> '+(esc(d.next)||'-')+'</div>';
+  if((d.work_log||[]).length){h+='<details><summary>작업 기록 '+d.work_log.length+'건</summary>'+d.work_log.map(x=>'<div>'+esc(x.start)+' ~ '+esc(x.end)+' · '+hr(x.hours)+' · '+esc(x.how)+'</div>').join('')+'</details>';}
   if((d.history||[]).length){h+='<details><summary>검토 이력 '+d.history.length+'건</summary>'+d.history.map(x=>'<div>'+esc(x.date)+' · '+esc(x.score)+'점 · '+esc(x.note)+'</div>').join('')+'</details>';}
   h+='</div>';
 });
@@ -222,16 +252,21 @@ document.getElementById("app").innerHTML=h;
 ## 6. 명령어와 세션 시작 루틴
 
 **세션을 시작하면 Claude는** (학생이 아무 말 안 해도)
-1. `산출물/진행상태.json`이 있으면 읽고, 없으면 폴더·파일을 만들어요(3, 4번 규칙).
+1. `산출물/진행상태.json`이 있으면 읽고, 없으면 폴더·파일을 만들어요(3, 4번 규칙). 예전 파일에 `est_hours` 등 시간 필드가 없으면 2번 표 값과 `0`으로 채워 넣어요.
 2. 폴더에 산출물 파일이 있는데 상태가 `미착수`면 `작성중`으로 바꿔요(파일 존재 + 수정 시각으로 판단).
-3. 진행판을 열고(5번) 채팅에는 **세 줄 이내**로 요약해요: 지금 주차, 가장 급한 산출물, 오늘 추천 작업.
+3. 작업 중(`working_since`)인 문서가 있으면 이어서 할지, 끝난 시각이 언제인지 물어봐요(4-1).
+4. 진행판을 열고(5번) 채팅에는 **세 줄 이내**로 요약해요: 지금 주차, 가장 급한 산출물, 오늘 추천 작업.
 
 | 학생이 말하면 | Claude가 하는 일 |
 |---|---|
 | `시작` | 위 시작 루틴 실행, 진행판 열기 |
 | `가이드 N` (N=1~7) | 8번의 해당 산출물 안내를 **시작 질문부터 한 단계씩** 대화로 안내 |
 | `검토 N` | 7번 절차대로 문서 검토·채점·피드백, 진행상태·진행판 갱신 |
-| `현황` | 폴더를 다시 훑어 상태 갱신, 진행판 갱신, 오늘 할 일 3개 안내 |
+| `현황` | 폴더를 다시 훑어 상태 갱신, 진행판 갱신, 오늘 할 일 3개 안내, 예상 대비 실제 작업시간 한 줄 요약 |
+| `작업시작 N` | N번 문서 작업 시작 시각 기록(4-1), 진행판 갱신 |
+| `작업종료 N` | N번 문서 작업 시간 계산·누적(4-1), 진행판 갱신 |
+| `시간 N 2.5` | 기록 못 한 작업시간을 직접 추가(4-1), 진행판 갱신 |
+| `시간표` | 산출물별 예상·실제 작업시간과 차이를 채팅에 표로 보여 줌 |
 | `일관성 점검` | 10번 점검표로 문서 사이 불일치 찾기, 결과를 진행판에 반영 |
 | `상태 N 완료/작성중/...` | 학생이 직접 상태 변경(단, `완료`는 7-4 조건을 만족할 때만 허용) |
 | `질문: ...` | 용어·작성법 질문에 쉬운 말로 답변 (문서를 대신 써 주지 않음) |
@@ -256,6 +291,7 @@ document.getElementById("app").innerHTML=h;
 
 ```
 [문서명] 검토 결과 — 점수 ○○점 (등급) · 상태: ○○
+작업시간 — 예상 ○시간 · 실제 ○시간
 
 잘한 점
 - (구체적으로 1~3개)
@@ -271,7 +307,7 @@ document.getElementById("app").innerHTML=h;
 ```
 
 검토 후 Claude는 아래를 해요.
-1. `검토기록/날짜_코드.md` 에 위 피드백 전체와 채점표 결과를 저장해요.
+1. `검토기록/날짜_코드.md` 에 위 피드백 전체와 채점표 결과, **검토 시점의 예상·실제 작업시간**을 저장해요.
 2. `진행상태.json`의 `status`, `score`, `star_fail`, `feedback`(한 줄), `next`(한 줄), `history`를 갱신해요.
 3. 진행판을 다시 만들어요.
 
@@ -512,7 +548,7 @@ document.getElementById("app").innerHTML=h;
 1. 계획서의 범위 표를 가져와 **완료 / 일부 / 미완료 / 제외**로 결과를 적어요.
 2. 낸 산출물 목록(이름·버전·위치)을 표로 적어요.
 3. 시험 요약은 **시험 결과서의 숫자와 똑같이** 옮겨요.
-4. 일정 계획 대비 실제를 적어요.
+4. 일정 계획 대비 실제를 적어요. 진행판의 **산출물별 예상·실제 작업시간** 표도 옮겨 적고, 차이가 큰 문서는 이유를 한 줄씩 적어요.
 5. 어려웠던 점과 해결, 배운 점을 적어요.
 6. 남은 과제와 다음에 할 일을 적어요.
 
@@ -522,7 +558,7 @@ document.getElementById("app").innerHTML=h;
 | ★ 범위 대비 결과 | 3 | 계획서 범위 항목마다 결과(완료/일부/미완료/제외)가 있고 미완료를 숨기지 않았다 |
 | ★ 산출물 목록 | 3 | 7종의 이름·버전·위치가 있고 실제 파일과 같다 |
 | 시험 요약 | 2 | 시험 결과서의 숫자와 같다 |
-| 일정 비교 | 2 | 계획 대비 실제 일정 차이와 이유가 있다 |
+| 일정 비교 | 2 | 계획 대비 실제 일정과 산출물별 예상·실제 작업시간 차이, 그 이유가 있다 |
 | 어려움·해결 | 2 | 구체적인 사례가 있다 |
 | 남은 과제 | 2 | 다음에 할 일이 있다 |
 | 배운 점 | 1 | 한 문단 이상 |
@@ -565,4 +601,5 @@ document.getElementById("app").innerHTML=h;
 - Claude의 검토는 **문서에 쓰인 내용** 기준이에요. 실제 소스와 문서가 맞는지는 학생이 소스·API를 보여 줄 때만 대조해요.
 - Word 파일을 읽을 수 없는 환경이면 PDF 저장이나 내용 붙여넣기로 대신해요.
 - 진행판은 Claude가 갱신할 때 바뀌어요. 최신 상태를 보고 싶으면 `현황`이라고 말해요.
+- 실제 작업시간은 학생이 `작업시작`·`작업종료`·`시간`으로 알려 준 만큼만 정확해요. 기록을 빼먹으면 실제보다 적게 보여요.
 - 위 8번의 예시 데이터는 모두 **가상**이에요. 학생의 실제 LMS 범위·화면·테이블 이름이 있으면 그것을 기준으로 검토해요.

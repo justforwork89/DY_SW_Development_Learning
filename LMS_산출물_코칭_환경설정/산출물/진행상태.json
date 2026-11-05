@@ -1,0 +1,164 @@
+{
+  "project": "LMS",
+  "student": "학생 이름",
+  "updated": "2026-11-05 14:45",
+  "week": 1,
+  "docs": [
+    {
+      "no": 1,
+      "id": "PLAN",
+      "name": "프로젝트 계획서",
+      "file": "01_프로젝트계획서_v0.1.docx",
+      "week_due": 1,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "'작업시작 1' 말하고 '가이드 1'로 계획서 작성 시작 (이번 주 마감)",
+      "est_hours": 8,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 2,
+      "id": "REQ",
+      "name": "요구사항 정의서",
+      "file": "02_요구사항정의서_v0.1.docx",
+      "week_due": 2,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "계획서 다음 순서로 작성 (2주차 마감)",
+      "est_hours": 12,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 3,
+      "id": "SCR",
+      "name": "화면 설계서",
+      "file": "03_화면설계서_v0.1.docx",
+      "week_due": 3,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "",
+      "est_hours": 16,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 4,
+      "id": "API",
+      "name": "API 명세서",
+      "file": "04_API명세서_v0.1.docx",
+      "week_due": 3,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "",
+      "est_hours": 12,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 5,
+      "id": "DB",
+      "name": "테이블 정의서",
+      "file": "05_테이블정의서_v0.1.docx",
+      "week_due": 3,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "",
+      "est_hours": 12,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 6,
+      "id": "TEST",
+      "name": "시험 결과서",
+      "file": "06_시험결과서_v0.1.docx",
+      "week_due": 7,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "",
+      "est_hours": 16,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    },
+    {
+      "no": 7,
+      "id": "FINAL",
+      "name": "완료 보고서",
+      "file": "07_완료보고서_v0.1.docx",
+      "week_due": 8,
+      "status": "작성중",
+      "score": null,
+      "star_fail": 0,
+      "feedback": "",
+      "next": "",
+      "est_hours": 6,
+      "actual_hours": 0,
+      "working_since": "",
+      "work_log": [],
+      "history": []
+    }
+  ],
+  "consistency": [
+    {
+      "check": "요구사항 ↔ 화면·API",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "화면 ↔ API",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "API ↔ 테이블",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "코드값 ↔ 공통코드",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "요구사항 ↔ 시험",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "계획서 범위 ↔ 완료보고서",
+      "result": "NA",
+      "note": ""
+    },
+    {
+      "check": "시험 숫자 ↔ 완료보고서",
+      "result": "NA",
+      "note": ""
+    }
+  ]
+}
